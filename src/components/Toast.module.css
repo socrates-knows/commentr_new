@@ -1,0 +1,117 @@
+.toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.3s ease-out;
+  z-index: 9999;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.icon {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.message {
+  flex: 1;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+  font-family: 'Geist Mono', monospace;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: #ffffff;
+}
+
+/* Success */
+.success {
+  border-color: #44ff44;
+}
+
+.success .icon {
+  color: #44ff44;
+  background-color: rgba(68, 255, 68, 0.1);
+}
+
+/* Error */
+.error {
+  border-color: #ff4444;
+}
+
+.error .icon {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+/* Warning */
+.warning {
+  border-color: #ffaa00;
+}
+
+.warning .icon {
+  color: #ffaa00;
+  background-color: rgba(255, 170, 0, 0.1);
+}
+
+/* Info */
+.info {
+  border-color: #4488ff;
+}
+
+.info .icon {
+  color: #4488ff;
+  background-color: rgba(68, 136, 255, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .toast {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    min-width: auto;
+    max-width: none;
+  }
+}

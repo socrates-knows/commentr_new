@@ -62,8 +62,9 @@ export default function Onboarding() {
 
   const handleComplete = async () => {
     setLoading(true)
-    
+
     try {
+      // Create startup record
       const { data: startup, error: startupError } = await supabase
         .from('startups')
         .insert({
@@ -82,6 +83,45 @@ export default function Onboarding() {
 
       if (startupError) throw startupError
 
+      // Upload files to storage and save metadata
+      if (uploadedFiles.length > 0) {
+        for (const file of uploadedFiles) {
+          try {
+            // Upload file to Supabase Storage
+            const fileName = `${user.id}/${startup.id}/${Date.now()}_${file.name}`
+            const { data: uploadData, error: uploadError } = await supabase.storage
+              .from('knowledge-files')
+              .upload(fileName, file)
+
+            if (uploadError) {
+              console.error('Error uploading file:', uploadError)
+              continue
+            }
+
+            // Get public URL
+            const { data: urlData } = supabase.storage
+              .from('knowledge-files')
+              .getPublicUrl(fileName)
+
+            // Save file metadata to knowledge_items
+            const fileType = file.type.startsWith('image/') ? 'image' :
+                           file.type === 'application/pdf' ? 'pdf' : 'file'
+
+            await supabase
+              .from('knowledge_items')
+              .insert({
+                startup_id: startup.id,
+                type: fileType,
+                content: urlData.publicUrl,
+                filename: file.name
+              })
+          } catch (fileError) {
+            console.error('Error processing file:', file.name, fileError)
+          }
+        }
+      }
+
+      // Save text content
       if (textContent) {
         const { error: knowledgeError } = await supabase
           .from('knowledge_items')
@@ -94,6 +134,7 @@ export default function Onboarding() {
         if (knowledgeError) throw knowledgeError
       }
 
+      // Update profile
       const { error: profileError } = await supabase
         .from('profiles')
         .update({

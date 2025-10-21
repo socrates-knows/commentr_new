@@ -1,0 +1,466 @@
+.loadingContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.loadingText {
+  font-size: 14px;
+  color: #888888;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #000000;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebarHeader {
+  padding: 24px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav {
+  flex: 1;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  font-size: 14px;
+  color: #888888;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navItem:hover {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.navItemActive {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.navIcon {
+  font-size: 16px;
+  width: 16px;
+  text-align: center;
+}
+
+.sidebarFooter {
+  padding: 16px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.signOutButton {
+  width: 100%;
+  background-color: transparent;
+  color: #888888;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+
+.signOutButton:hover {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 48px;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pageTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #888888;
+}
+
+.scheduleButton {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: opacity 0.2s;
+}
+
+.scheduleButton:hover {
+  opacity: 0.8;
+}
+
+/* Calendar */
+.calendarContainer {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 40px;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.navButton {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: all 0.2s;
+}
+
+.navButton:hover {
+  background-color: #000000;
+}
+
+.monthTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.calendar {
+  margin-bottom: 24px;
+}
+
+.dayNames {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dayName {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888888;
+  padding: 8px;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dayCell {
+  min-height: 100px;
+  background-color: #000000;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.dayCell:hover {
+  border-color: #ffffff;
+}
+
+.dayCellEmpty {
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+
+.dayCellEmpty:hover {
+  border: none;
+}
+
+.dayCellToday {
+  border-color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.dayNumber {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.postsIndicator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.postDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #888888;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legendTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888888;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #888888;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Upcoming Posts */
+.upcomingSection {
+  margin-top: 48px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.upcomingList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upcomingItem {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.upcomingDate {
+  font-size: 12px;
+  color: #888888;
+  min-width: 140px;
+  font-family: 'Geist Mono', monospace;
+}
+
+.upcomingContent {
+  flex: 1;
+}
+
+.upcomingPlatform {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.upcomingText {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.upcomingActions {
+  display: flex;
+  gap: 8px;
+}
+
+.editButton {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: all 0.2s;
+}
+
+.editButton:hover {
+  background-color: #000000;
+}
+
+.deleteButton {
+  background-color: transparent;
+  color: #ff4444;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: all 0.2s;
+}
+
+.deleteButton:hover {
+  background-color: rgba(255, 68, 68, 0.1);
+  border-color: #ff4444;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 48px 24px;
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.emptyDesc {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 24px;
+}
+
+.emptyButton {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: opacity 0.2s;
+}
+
+.emptyButton:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 24px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .scheduleButton {
+    width: 100%;
+  }
+
+  .daysGrid {
+    gap: 4px;
+  }
+
+  .dayCell {
+    min-height: 80px;
+    padding: 4px;
+  }
+
+  .dayNumber {
+    font-size: 12px;
+  }
+
+  .upcomingItem {
+    flex-direction: column;
+  }
+
+  .upcomingDate {
+    min-width: auto;
+  }
+
+  .upcomingActions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .editButton,
+  .deleteButton {
+    flex: 1;
+  }
+}

@@ -317,6 +317,16 @@
   border-color: #ff4444;
 }
 
+.emptyKnowledge {
+  padding: 32px;
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+  background-color: #000000;
+  border: 1px dashed #1a1a1a;
+  border-radius: 4px;
+}
+
 .uploadButton {
   background-color: transparent;
   color: #ffffff;

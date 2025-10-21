@@ -1,14 +1,16 @@
-import './globals.css'
+'use client'
 
-export const metadata = {
-  title: 'Commentr - AI Growth Engine for Startups',
-  description: 'The AI that learns your startup—then grows it for you through authentic posts and replies.',
-}
+import './globals.css'
+import { ToastProvider } from '@/components/ToastProvider'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ToastProvider>
+          {children}
+        </ToastProvider>
+      </body>
     </html>
   )
 }
