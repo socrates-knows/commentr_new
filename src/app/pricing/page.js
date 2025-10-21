@@ -148,21 +148,21 @@ export default function Pricing() {
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>What counts as a generation?</h3>
             <p className={styles.faqAnswer}>
-              Each time you click "Generate" to create posts or replies, that counts as one generation. Each generation creates 3 variants for you to choose from.
+              Each time you click &quot;Generate&quot; to create posts or replies, that counts as one generation. Each generation creates 3 variants for you to choose from.
             </p>
           </div>
 
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>Can I change plans anytime?</h3>
             <p className={styles.faqAnswer}>
-              Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately and we'll prorate any charges.
+              Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately and we&apos;ll prorate any charges.
             </p>
           </div>
 
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>What happens if I exceed my limit?</h3>
             <p className={styles.faqAnswer}>
-              You can purchase additional generations at $0.10 each, or upgrade to a higher tier. We'll never charge without your permission.
+              You can purchase additional generations at $0.10 each, or upgrade to a higher tier. We&apos;ll never charge without your permission.
             </p>
           </div>
 

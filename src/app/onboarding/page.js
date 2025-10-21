@@ -170,7 +170,7 @@ export default function Onboarding() {
           <div className={styles.stepContent}>
             <h1 className={styles.title}>Tell us about your startup</h1>
             <p className={styles.subtitle}>
-              This helps Commentr understand what you're building
+              This helps Commentr understand what you&apos;re building
             </p>
 
             <div className={styles.form}>
