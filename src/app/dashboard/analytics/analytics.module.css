@@ -1,0 +1,414 @@
+.loadingContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.loadingText {
+  font-size: 14px;
+  color: #888888;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #000000;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebarHeader {
+  padding: 24px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav {
+  flex: 1;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  font-size: 14px;
+  color: #888888;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navItem:hover {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.navItemActive {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.navIcon {
+  font-size: 16px;
+  width: 16px;
+  text-align: center;
+}
+
+.sidebarFooter {
+  padding: 16px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.signOutButton {
+  width: 100%;
+  background-color: transparent;
+  color: #888888;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+
+.signOutButton:hover {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 48px;
+  max-width: 1400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #888888;
+}
+
+.timeRangeSelector {
+  display: flex;
+  gap: 8px;
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.timeButton {
+  background-color: transparent;
+  color: #888888;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: all 0.2s;
+}
+
+.timeButton:hover {
+  color: #ffffff;
+}
+
+.timeButtonActive {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Metrics */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.metricCard {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.metricLabel {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 12px;
+}
+
+.metricValue {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.metricChange {
+  font-size: 12px;
+  color: #666666;
+}
+
+/* Charts */
+.chartsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.chartCard {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.chartCardFull {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.chartTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.chartSubtitle {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 24px;
+}
+
+.chartContainer {
+  margin: 0 -12px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+/* Top Posts */
+.topPostsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topPostItem {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.topPostRank {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  min-width: 40px;
+}
+
+.topPostContent {
+  flex: 1;
+}
+
+.topPostMeta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.topPostPlatform {
+  font-size: 11px;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.topPostDate {
+  font-size: 12px;
+  color: #666666;
+}
+
+.topPostText {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.topPostEngagement {
+  font-size: 12px;
+  color: #888888;
+}
+
+/* Insights */
+.insightsSection {
+  margin-top: 48px;
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.insightCard {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+
+.insightIcon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.insightTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.insightText {
+  font-size: 13px;
+  color: #888888;
+  line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 24px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .metricsGrid,
+  .chartsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  margin: 48px 0;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.emptyDesc {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 24px;
+}
+
+.emptyButton {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: opacity 0.2s;
+}
+
+.emptyButton:hover {
+  opacity: 0.8;
+}
+}

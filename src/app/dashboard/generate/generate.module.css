@@ -1,0 +1,410 @@
+.loadingContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.loadingText {
+  font-size: 14px;
+  color: #888888;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+/* Sidebar - reuse from dashboard */
+.sidebar {
+  width: 240px;
+  background-color: #000000;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebarHeader {
+  padding: 24px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav {
+  flex: 1;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  font-size: 14px;
+  color: #888888;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navItem:hover {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.navItemActive {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.navIcon {
+  font-size: 16px;
+  width: 16px;
+  text-align: center;
+}
+
+.sidebarFooter {
+  padding: 16px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.signOutButton {
+  width: 100%;
+  background-color: transparent;
+  color: #888888;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+
+.signOutButton:hover {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 48px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #888888;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 32px;
+}
+
+/* Config Panel */
+.configPanel {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 32px;
+  height: fit-content;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.buttonGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.optionButton {
+  background-color: transparent;
+  color: #888888;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: all 0.2s;
+}
+
+.optionButton:hover {
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.optionButtonActive {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.select {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: 'Geist Mono', monospace;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+.textarea {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 14px;
+  font-family: 'Geist Mono', monospace;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+.textarea::placeholder {
+  color: #666666;
+}
+
+.hint {
+  font-size: 11px;
+  color: #666666;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.usageInfo {
+  font-size: 12px;
+  color: #888888;
+  text-align: center;
+  padding: 12px;
+  background-color: #000000;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.generateButton {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: opacity 0.2s;
+}
+
+.generateButton:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.generateButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  background-color: #1a0a0a;
+  border: 1px solid #ff4444;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 13px;
+  color: #ff4444;
+  margin-top: 16px;
+}
+
+/* Results Panel */
+.resultsPanel {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 32px;
+  min-height: 500px;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.emptyDesc {
+  font-size: 14px;
+  color: #888888;
+  max-width: 400px;
+}
+
+.variantTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 16px;
+}
+
+.variantTab {
+  background-color: transparent;
+  color: #888888;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.variantTab:hover {
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+.variantTabActive {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.postPreview {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.postContent {
+  background-color: #000000;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 24px;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  min-height: 300px;
+}
+
+.postActions {
+  display: flex;
+  gap: 12px;
+}
+
+.actionButton {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: all 0.2s;
+}
+
+.actionButton:hover {
+  background-color: #0a0a0a;
+}
+
+.actionButtonPrimary {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  transition: opacity 0.2s;
+}
+
+.actionButtonPrimary:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 24px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
